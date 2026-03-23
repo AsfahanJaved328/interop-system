@@ -1,0 +1,18 @@
+{
+  "filter_paths": [
+    "node_modules",
+    "artifacts",
+    "cache",
+    "frontend",
+    "frontend-static",
+    "scripts",
+    "sdk",
+    "subgraph"
+  ],
+  "solc_version": "0.8.24",
+  "exclude_low": false,
+  "exclude_medium": false,
+  "exclude_high": false,
+  "exclude_informational": false,
+  "exclude_optimization": false
+}

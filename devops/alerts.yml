@@ -1,0 +1,10 @@
+groups:
+  - name: interop-alerts
+    rules:
+      - alert: HighFailureRate
+        expr: rate(interop_messages_failed[5m]) > 0.1
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "High message failure rate"

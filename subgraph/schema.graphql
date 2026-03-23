@@ -1,0 +1,8 @@
+type CrossChainMessage @entity {
+  id: ID!
+  sourceChain: BigInt!
+  destinationChain: BigInt!
+  sender: Bytes!
+  receiver: Bytes!
+  createdAt: BigInt!
+}

@@ -1,0 +1,35 @@
+{
+  "name": "interop-system",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "powershell -ExecutionPolicy Bypass -Command \"$env:APPDATA='C:\\Users\\Shakeel Computers\\Documents\\interop-system\\.hardhat-home'; $env:LOCALAPPDATA='C:\\Users\\Shakeel Computers\\Documents\\interop-system\\.hardhat-home'; hardhat test\"",
+    "compile": "powershell -ExecutionPolicy Bypass -Command \"$env:APPDATA='C:\\Users\\Shakeel Computers\\Documents\\interop-system\\.hardhat-home'; $env:LOCALAPPDATA='C:\\Users\\Shakeel Computers\\Documents\\interop-system\\.hardhat-home'; hardhat compile\"",
+    "lint": "echo \"lint pending\"",
+    "deploy": "powershell -ExecutionPolicy Bypass -Command \"$env:APPDATA='C:\\Users\\Shakeel Computers\\Documents\\interop-system\\.hardhat-home'; $env:LOCALAPPDATA='C:\\Users\\Shakeel Computers\\Documents\\interop-system\\.hardhat-home'; hardhat run scripts/deploy.ts\"",
+    "deploy:local": "powershell -ExecutionPolicy Bypass -Command \"$env:APPDATA='C:\\Users\\Shakeel Computers\\Documents\\interop-system\\.hardhat-home'; $env:LOCALAPPDATA='C:\\Users\\Shakeel Computers\\Documents\\interop-system\\.hardhat-home'; hardhat run scripts/deploy-local.ts --network localhost\"",
+    "foundry:install": "powershell -ExecutionPolicy Bypass -File scripts/install-foundry.ps1",
+    "foundry:test": "forge test",
+    "slither": "slither . --config slither.config.json",
+    "backend:setup": "npm run foundry:install && npm run slither",
+    "deploy:adapters": "powershell -ExecutionPolicy Bypass -Command \"$env:APPDATA='C:\\Users\\Shakeel Computers\\Documents\\interop-system\\.hardhat-home'; $env:LOCALAPPDATA='C:\\Users\\Shakeel Computers\\Documents\\interop-system\\.hardhat-home'; hardhat run scripts/deploy-adapters.ts --network localhost\"",
+    "deploy:adapters:testnet": "powershell -ExecutionPolicy Bypass -Command \"$env:APPDATA='C:\\Users\\Shakeel Computers\\Documents\\interop-system\\.hardhat-home'; $env:LOCALAPPDATA='C:\\Users\\Shakeel Computers\\Documents\\interop-system\\.hardhat-home'; $env:FRONTEND_ENV_FILE='C:\\Users\\Shakeel Computers\\Documents\\interop-system\\frontend\\.env.testnet'; hardhat run scripts/deploy-adapters.ts --network testnet\"",
+    "dev:stack": "powershell -ExecutionPolicy Bypass -File scripts/dev-stack.ps1",
+    "build:pack": "powershell -ExecutionPolicy Bypass -File scripts/build-pack.ps1",
+    "deploy:testnet": "powershell -ExecutionPolicy Bypass -Command \"$env:APPDATA='C:\\Users\\Shakeel Computers\\Documents\\interop-system\\.hardhat-home'; $env:LOCALAPPDATA='C:\\Users\\Shakeel Computers\\Documents\\interop-system\\.hardhat-home'; hardhat run scripts/deploy-testnet.ts --network testnet\"",
+    "deploy:testnet:full": "npm run deploy:testnet && npm run deploy:adapters:testnet",
+    "deploy:testnet:preflight": "powershell -ExecutionPolicy Bypass -File scripts/testnet-preflight.ps1",
+    "promote:testnet-env": "powershell -ExecutionPolicy Bypass -File scripts/promote-testnet-env.ps1",
+    "release:pack": "powershell -ExecutionPolicy Bypass -File scripts/package-release.ps1"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "dotenv": "^16.4.5",
+    "hardhat": "^2.22.10",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2"
+  }
+}
