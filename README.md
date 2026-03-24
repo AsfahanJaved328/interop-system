@@ -15,6 +15,19 @@ Interop System is a cross-chain interoperability platform that combines:
 - Public app: [https://interop-system.vercel.app](https://interop-system.vercel.app)
 - GitHub: [https://github.com/AsfahanJaved328/interop-system](https://github.com/AsfahanJaved328/interop-system)
 
+## Product Preview
+### Dashboard
+![Interop Dashboard](docs/screenshots/dashboard.png)
+
+### Bridge
+![Interop Bridge](docs/screenshots/bridge.png)
+
+### Intents
+![Interop Intents](docs/screenshots/intents.png)
+
+### Analytics
+![Interop Analytics](docs/screenshots/analytics.png)
+
 ## What It Is Useful For
 - Demonstrating a cross-chain interoperability stack to clients, teammates, or investors
 - Testing router, intent, and adapter flows on Sepolia
@@ -70,7 +83,7 @@ See also:
 - [docs/SAFE_DEPLOYMENT.md](docs/SAFE_DEPLOYMENT.md)
 - [docs/PROJECT_SUMMARY.md](docs/PROJECT_SUMMARY.md)
 
-## Screenshots
+## Screenshot Assets
 Current captures are stored in:
 - [docs/screenshots/dashboard.png](docs/screenshots/dashboard.png)
 - [docs/screenshots/bridge.png](docs/screenshots/bridge.png)
