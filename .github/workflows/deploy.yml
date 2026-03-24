@@ -9,8 +9,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: npm
       - run: npm install
-      - run: npm run compile
+      - run: npx hardhat compile
       - run: npx hardhat run scripts/deploy.ts
         env:
           RPC_URL: ${{ secrets.RPC_URL }}
